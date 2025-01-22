@@ -136,71 +136,71 @@ class GameInfoService {
     async AiPromptAndResponse(name, type, genre) {
         const foundGame = await GameInfoRepository.findGameByName(name);
         const filteredData = {};
-        if(foundGame){
-            filteredData.gameName =foundGame.gameName ;
-            filteredData.genre =foundGame.genre ;
-            filteredData.type =foundGame.type ;
-            filteredData.summary =foundGame.summary ;
-            filteredData.about =foundGame.about ;
-            filteredData.organization =foundGame.organization ;
-            filteredData.developerStudio =foundGame.developerStudio ;
-            filteredData.publisher =foundGame.publisher ;
-            filteredData.characters =foundGame.characters ;
-            filteredData.locations =foundGame.locations ;
-            filteredData.awards =foundGame.awards ;
-            filteredData.events =foundGame.events ;
-            filteredData.platform =foundGame.platform ;
-            filteredData.media =foundGame.media ;
-            filteredData.books =foundGame.books ;
+        if (foundGame) {
+            filteredData.gameName = foundGame.gameName;
+            filteredData.genre = foundGame.genre;
+            filteredData.type = foundGame.type;
+            filteredData.summary = foundGame.summary;
+            filteredData.about = foundGame.about;
+            filteredData.organization = foundGame.organization;
+            filteredData.developerStudio = foundGame.developerStudio;
+            filteredData.publisher = foundGame.publisher;
+            filteredData.characters = foundGame.characters;
+            filteredData.locations = foundGame.locations;
+            filteredData.awards = foundGame.awards;
+            filteredData.events = foundGame.events;
+            filteredData.platform = foundGame.platform;
+            filteredData.media = foundGame.media;
+            filteredData.books = foundGame.books;
             console.log(filteredData);
             return filteredData;
         }
         const newPrompt = `Find the info of ${name} game in genre of ${genre} and in type of ${type} in all sections and in a JSON format. Follow these instructions carefully:
 
-        Write the full name of the game
-        
+        1 . Write the full name of the game        
         Provide the complete name of the game: ${name}
-        Write the genre of the game
         
+        2 . Write the genre of the game        
         Specify the genre of ${name} (e.g., first-person shooter, role-playing game, etc.).
-        Write a spoiler-free plot summary
         
+        3 . Write a spoiler-free plot summary of ${name}       
         Write a paragraph of at least 1000 characters describing the game's storyline without revealing any spoilers.
-        Write about the game
         
-        Provide a detailed description (at least 1000 characters) about the game, including its key features, gameplay, and themes.
+        4 . Write about the game
+        Provide a detailed description (at least 1000 characters) about the ${name} game, including its key features, gameplay, and themes.
         Write the type of game
         
-        Mention the type of game, e.g., "video game," "classic local game," or "board game."
-        Write the organizations related to the game
+        5 . Mention the type of the ${name} game, e.g., "video game," "classic local game," or "board game."
+        Write the organizations related to the ${name} game
         
-        List the organizations directly associated with the game, such as developers, publishers, or other key contributors.
+        6 . List the organizations directly associated with the ${name} game, such as developers, publishers, or other key contributors.
         Write the developer studio of the game
         
-        Specify the name of the studio that developed ${name}.
+        7 . Specify the name of the studio that developed ${name}.
         Write the publisher of the game
         
-        Provide the name of the publishing company.
-        Write the main characters in the game
+        8 . Provide the name of the publishing company.
+        Write the main characters in the ${name} game
         
-        List the primary characters featured in ${name}.
+        9 . List the primary characters featured in ${name}.
         Write the locations in the game
         
-        Provide a list of locations or settings where the game takes place.
+        10 . Provide a list of locations or settings where the ${name} game takes place.
         Write the awards won by the game
         
-        List the awards (including wins and nominations) that the game has received.
+        11 . List the awards (including wins and nominations) that the ${name} game has received.
         Write the real-life events that inspired the game
         
-        List details of real-life events that are or were inspired or influenced by the game, with exact dates and descriptions.
-        Write the platforms the game is available on
+        12 . List details of real-life events and festivals that are or were inspired or influenced by the ${name} game, with exact dates and descriptions. Don't include the events the game was inspired by.
         
+        13 . Write the platforms the game is available on        
         List all platforms on which ${name} has been released.
-        Media (Books and Movies)
         
-        Movies, TV Shows, and Anime:
-        Provide complete information about any movies, TV shows, or anime inspired by or related to the game and list them, include release dates too.
-        Books:
+        
+        14 . other Movies, TV Shows, and Anime (as Media field):
+        list any movies, TV shows, or anime inspired by or related to the ${name} game , include release dates too. (Don't include books or novels in this field.)
+        
+        15 . Books:
         Include details about books or novels based on ${name}, if available.
         
         the JSON format that i want (don't make array for feilds) : 
