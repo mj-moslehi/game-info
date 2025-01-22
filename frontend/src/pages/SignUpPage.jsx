@@ -14,7 +14,7 @@ const SignUpPage = () => {
         setError("");
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:2555/user/create", {
+            const response = await axios.post("https://api.rastar.sbs/user/create", {
                 firstName: firstName,
                 lastName: lastName,
                 username: username,

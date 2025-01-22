@@ -29,15 +29,15 @@ const AddingGamePage = () => {
 
         const gameList = games.split("\n").filter((game) => game.trim() !== "");
 
-        // if (gameList.length > 145) {
-        //     setError("The maximum is 145 Games");
-        //     setIsProgress(false);
-        //     return;
-        // }
+        if (gameList.length > 145) {
+            setError("The maximum is 145 Games");
+            setIsProgress(false);
+            return;
+        }
 
         try {
             const responseDate = await axios.post(
-                "http://localhost:2555/gameInfo/parsing-generate-data",
+                "https://api.rastar.sbs/gameInfo/parsing-generate-data",
                 {
                     authorization: token,
                     gameList: gameList,
@@ -59,7 +59,7 @@ const AddingGamePage = () => {
         setMessage("");
         setError("");
         try {
-            await axios.get("http://localhost:2555/gameInfo/convert-to-excel", {
+            await axios.get("https://api.rastar.sbs/gameInfo/convert-to-excel", {
                 headers: {
                     authorization: token,
                 },
@@ -98,7 +98,7 @@ const AddingGamePage = () => {
             for (let i = 0; i < rowData.length; i += batchSize) {
                 const batch = rowData.slice(i, i + batchSize);
                 responseData = await axios.post(
-                    "http://localhost:2555/gameInfo/create",
+                    "https://api.rastar.sbs/gameInfo/create",
                     {
                         gameData: batch,
                         authorization: token,

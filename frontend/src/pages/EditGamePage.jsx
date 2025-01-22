@@ -32,7 +32,7 @@ const EditGamePage = () => {
         setMessage("");
         try {
             const response = await axios.post(
-                "http://localhost:2555/gameInfo/find-by-id",
+                "https://api.rastar.sbs/gameInfo/find-by-id",
                 {
                     id: id,
                     authorization: token,
@@ -78,7 +78,7 @@ const EditGamePage = () => {
         setError("");
         setMessage("");
         try {
-            await axios.put("http://localhost:2555/gameInfo/update", {
+            await axios.put("https://api.rastar.sbs/gameInfo/update", {
                 id: id,
                 updateReq: formData,
                 authorization: token,
@@ -96,7 +96,7 @@ const EditGamePage = () => {
         setError("");
         setMessage("");
         try {
-            await axios.put("http://localhost:2555/gameInfo/delete", {
+            await axios.put("https://api.rastar.sbs/gameInfo/delete", {
                 id: id,
                 authorization: token,
             });

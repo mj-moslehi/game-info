@@ -14,7 +14,7 @@ const SignInPage = () => {
         setError("");
         event.preventDefault();
         try {
-            const response = await axios.post("http://localhost:2555/user/sign-in", {
+            const response = await axios.post("https://api.rastar.sbs/user/sign-in", {
                 username,
                 password,
             });

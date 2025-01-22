@@ -17,7 +17,7 @@ const SearchGamePage = () => {
     try {
       setError("loading...");
       const response = await axios.post(
-        "http://localhost:2555/gameInfo/find-all",
+        "https://api.rastar.sbs/gameInfo/find-all",
         {
           authorization: token,
         }
@@ -37,7 +37,7 @@ const SearchGamePage = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:2555/gameInfo/searching-with-name",
+        "https://api.rastar.sbs/gameInfo/searching-with-name",
         {
           name: searchInput,
           authorization: token,
