@@ -73,7 +73,9 @@ class GameInfoService {
                 awards: updateReq.awards,
                 events: updateReq.events,
                 platform: updateReq.platform,
+                topPlayers: updateReq.topPlayers,
                 media: updateReq.media,
+                books: updateReq.books,
             };
 
             return await GameInfoRepository.updateGameInfo(id, updatedGameInfo);
@@ -119,20 +121,6 @@ class GameInfoService {
         }
     }
 
-    async updateTheEditedGames() {
-        let newGameInfo = {}
-        const OldGames = await GameInfoRepository.updateEditedGames();
-        for (const game in OldGames) {
-            newGameInfo.gameName = game.gameName;
-            newGameInfo.summary = game.summary;
-            newGameInfo.awards = game.awards;
-            newGameInfo.about = game.about;
-            newGameInfo.organization = game.organization;
-            newGameInfo.media = game.books + game.movies;
-
-        }
-    }
-
     async AiPromptAndResponse(name, type, genre) {
         const foundGame = await GameInfoRepository.findGameByName(name);
         const filteredData = {};
@@ -150,6 +138,7 @@ class GameInfoService {
             filteredData.awards = foundGame.awards;
             filteredData.events = foundGame.events;
             filteredData.platform = foundGame.platform;
+            filteredData.topPlayers = foundGame.topPlayers;
             filteredData.media = foundGame.media;
             filteredData.books = foundGame.books;
             console.log(filteredData);
@@ -196,11 +185,12 @@ class GameInfoService {
         13 . Write the platforms the game is available on        
         List all platforms on which ${name} has been released.
         
+        14 . Write the list of the Top Players of the ${name}
         
-        14 . other Movies, TV Shows, and Anime (as Media field):
+        15 . other Movies, TV Shows, and Anime (as Media field):
         list any movies, TV shows, or anime inspired by or related to the ${name} game , include release dates too. (Don't include books or novels in this field.)
         
-        15 . Books:
+        16 . Books:
         Include details about books or novels based on ${name}, if available.
         
         the JSON format that i want (don't make array for feilds) : 
@@ -218,6 +208,7 @@ class GameInfoService {
         "awards": "<Awards>",
         "events": "<Related Events>",
         "platform": "<Platforms>",
+        "topPlayers": "<TopPlayers>",
         "media": "<Media>",
         "books": "<Books>"
         }

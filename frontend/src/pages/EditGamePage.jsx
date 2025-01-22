@@ -21,6 +21,7 @@ const EditGamePage = () => {
         awards: "",
         events: "",
         platform: "",
+        topPlayers: "",
         media: "",
         books: ""
     });
@@ -53,6 +54,7 @@ const EditGamePage = () => {
                 awards: gameData.awards || "",
                 events: gameData.events || "",
                 platform: gameData.platform || "",
+                topPlayers: gameData.topPlayers || "",
                 media: gameData.media || "",
                 books: gameData.books || "",
             });
@@ -263,6 +265,16 @@ const EditGamePage = () => {
                         className="field short movies"
                         name="platform"
                         value={formData.platform}
+                        onChange={handleInputChange}
+                    ></textarea>
+
+                </div>
+                <div className="box">
+                    <div className="box-title medium">Top Players :</div>
+                    <textarea
+                        className="field short movies"
+                        name="topPlayers"
+                        value={formData.topPlayers}
                         onChange={handleInputChange}
                     ></textarea>
                 </div>

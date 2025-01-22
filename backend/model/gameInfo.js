@@ -73,7 +73,7 @@ const GameInfoSchema = mongoose.Schema(
 
         developerStudio: {
             type: String,
-            required:true,
+            required: true,
             validate: {
                 validator: function (value) {
                     return !validator.isEmpty(value.trim());
@@ -128,7 +128,7 @@ const GameInfoSchema = mongoose.Schema(
 
         events: {
             type: String,
-            required: [true, "Events are required"],
+            required: true,
             validate: {
                 validator: function (value) {
                     return !validator.isEmpty(value.trim());
@@ -139,7 +139,7 @@ const GameInfoSchema = mongoose.Schema(
 
         platform: {
             type: String,
-            required: [true, "Movies are required"],
+            required: true,
             validate: {
                 validator: function (value) {
                     return !validator.isEmpty(value.trim());
@@ -148,9 +148,20 @@ const GameInfoSchema = mongoose.Schema(
             },
         },
 
+        topPlayers: {
+            type: String,
+            required: true,
+            validate: {
+                validator: function (value) {
+                    return !validator.isEmpty(value.trim());
+                },
+                message: "Top Players cannot be empty or just spaces",
+            },
+        },
+
         media: {
             type: String,
-            required: [true, "Books are required"],
+            required: true,
             validate: {
                 validator: function (value) {
                     return !validator.isEmpty(value.trim());
@@ -161,7 +172,7 @@ const GameInfoSchema = mongoose.Schema(
 
         books: {
             type: String,
-            required: [true, "Books are required"],
+            required: true,
             validate: {
                 validator: function (value) {
                     return !validator.isEmpty(value.trim());
