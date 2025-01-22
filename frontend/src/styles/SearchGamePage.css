@@ -1,0 +1,79 @@
+.search-game-page {
+  position: relative;
+  width: 1980px;
+  height: 1200px;
+  width: 100%;
+  background: #2b2929;
+  display: flex;
+  justify-content: center;
+}
+
+.main-container-search-game {
+  position: relative;
+  width: 1780px;
+  height: 900px;
+  top: 264px;
+  background: #575656;
+  border: 5px solid #cf0000;
+  border-radius: 50px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  color: #000000;
+  font-size: x-large;
+}
+
+.error-message-search {
+  margin-top: 0px;
+  color: red;
+  font-size: 25px;
+  display: flex;
+  justify-self: center;
+}
+
+.search-input {
+  display: flex;
+  align-content: center;
+  justify-self: center;
+  height: 60px;
+  width: 300px;
+  border: 5px solid #cf0000;
+  border-radius: 50px;
+  font-size: 22px;
+  background-color: #d9d9d9;
+  padding-left: 10px;
+}
+
+.result-box {
+  margin-top: 50px;
+  display: flex;
+  justify-self: center;
+  height: 500px;
+  width: 1000px;
+  border: 5px solid #cf0000;
+  border-radius: 50px;
+  font-size: 22px;
+  background-color: #d9d9d9;
+  overflow: auto;
+}
+
+.result-box::-webkit-scrollbar {
+  width: 0px;
+}
+
+.choosing-game {
+  margin-top: 10px;
+  width: 900px;
+  padding: 5px;
+  border: 5px solid #cf0000;
+  border-radius: 50px;
+  font-size: 22px;
+  background-color: #d9d9d9;
+  cursor: pointer;
+}
+
+.list {
+  list-style-type: none;
+}

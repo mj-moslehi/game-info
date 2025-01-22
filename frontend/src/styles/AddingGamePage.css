@@ -1,0 +1,164 @@
+.add-game-page {
+  position: relative;
+  width: 1980px;
+  height: 1200px;
+  width: 100%;
+  background: #2b2929;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container-add-game {
+  position: absolute;
+  width: 1780px;
+  height: 900px;
+  top: 264px;
+  background: #575656;
+  border: 5px solid #cf0000;
+  border-radius: 50px;
+}
+
+.game-text {
+  position: absolute;
+  top: 210px;
+  left: 150px;
+  height: 494px;
+  width: 752px;
+  background-color: #d9d9d9;
+  border: 5px solid #cf0000;
+  border-radius: 50px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 48px;
+  color: #000000;
+  padding-top: 1em;
+  padding-left: 1em;
+  resize: none;
+  line-height: 1.5em;
+}
+
+.game-text::-webkit-scrollbar {
+  width: 0px;
+}
+
+.error-message {
+  color: red;
+  font-size: 25px;
+  align-content: center;
+  justify-self: center;
+}
+
+.message {
+  color: #66e55a;
+  font-size: 25px;
+  align-content: center;
+  justify-self: center;
+}
+
+.start-button {
+  position: absolute;
+  width: 240px;
+  height: 68px;
+  top: 210px;
+  left: 1230px;
+  border-radius: 50px;
+  border: 5px solid #cf0000;
+  background-color: #66e55a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 48px;
+  color: #000000;
+  cursor: pointer;
+}
+
+.download-excel-button {
+  position: absolute;
+  width: 240px;
+  height: 68px;
+  top: 650px;
+  left: 1230px;
+  border-radius: 50px;
+  border: 5px solid #cf0000;
+  background-color: #0053b2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 48px;
+  color: #000000;
+  cursor: pointer;
+}
+
+.add-database-button {
+  position: absolute;
+  width: 240px;
+  height: 68px;
+  top: 550px;
+  left: 1230px;
+  border-radius: 50px;
+  border: 5px solid #cf0000;
+  background-color: #0053b2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 48px;
+  color: #000000;
+  cursor: pointer;
+}
+
+.selection {
+  position: absolute;
+  width: 280px;
+  height: 68px;
+  top: 320px;
+  left: 1215px;
+  border-radius: 50px;
+  border: 5px solid #cf0000;
+  background-color: #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 48px;
+  color: #000000;
+  cursor: pointer;
+}
+
+.selection2{
+  position: absolute;
+  width: 280px;
+  height: 68px;
+  top: 440px;
+  left: 1215px;
+  border-radius: 50px;
+  border: 5px solid #cf0000;
+  background-color: #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 48px;
+  color: #000000;
+  cursor: pointer;
+}

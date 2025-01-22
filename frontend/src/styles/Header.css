@@ -1,0 +1,57 @@
+.header-box {
+  position: absolute;
+  width: 1780px;
+  height: 166px;
+  top: 42px;
+  display: flex;
+  align-items: center;
+  background: #575656;
+  border: 5px solid #cf0000;
+  border-radius: 50px;
+}
+
+.rastar-logo {
+  position: absolute;
+  width: 150px;
+  height: 151.11px;
+  left: 110px;
+  cursor: pointer;
+}
+
+.status-container {
+  position: absolute;
+  left: 670px;
+  width: 440px;
+  height: 78px;
+  background: #d9d9d9;
+  border: 5px solid #cf0000;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-text {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  color: #000000;
+}
+
+.user-info-box {
+  position: absolute;
+  width: 440px;
+  height: 78px;
+  left: 1183px;
+  background: #d9d9d9;
+  border: 5px solid #cf0000;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  font-size: 40px;
+  color: #000000;
+}

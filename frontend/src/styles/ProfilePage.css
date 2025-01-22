@@ -1,0 +1,94 @@
+.profile-page {
+  position: relative;
+  width: 100%;
+  background: #2b2929;
+  display: flex;
+  justify-content: center;
+  width: 1980px;
+  height: 1349px;
+}
+
+.profile-main {
+  position: relative;
+  top: 264px;
+  margin-top: 0px;
+  width: 1780px;
+  background: #575656;
+  border: 5px solid #cf0000;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box-profile {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  align-items: first baseline;
+}
+
+.field-title {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 48px;
+  color: #ffffff;
+  margin-left: 100px;
+  margin-left: 100px;
+  min-width: 300px;
+}
+
+.user-info {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 48px;
+  color: #000000;
+  margin-left: 100px;
+  margin-left: 100px;
+  min-width: 300px;
+}
+
+.field-update {
+  border-radius: 50px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  border: 5px solid #cf0000;
+  background-color: #d9d9d9;
+  resize: none;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 48px;
+  color: #000000;
+  scroll-behavior: smooth;
+  padding-left: 15px;
+  height: 80px;
+  width: 450px;
+}
+
+.two {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+
+.user-info {
+  margin-left: 0px;
+}
+
+.update-user {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 48px;
+  height: 70px;
+  width: 300px;
+  border-radius: 50px;
+  border: 5px solid #cf0000;
+  cursor: pointer;
+  background-color: #66e55a;
+}

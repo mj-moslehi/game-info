@@ -1,0 +1,99 @@
+.edit-game-page {
+  position: relative;
+  width: 100%;
+  background: #2b2929;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  margin-top: 112px;
+  margin-bottom: 50px;
+  position: relative;
+  width: 1780px;
+  height: 4358px;
+  top: 153px;
+  background: #575656;
+  border: 5px solid #cf0000;
+  border-radius: 50px;
+}
+
+.message {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 48px;
+  color: #66e55a;
+}
+
+.box {
+  display: flex;
+  align-items: first baseline;
+  padding: 10px;
+}
+
+.box-title {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 48px;
+  color: #ffffff;
+  margin-left: 100px;
+  min-width: 200px;
+}
+
+.field {
+  border-radius: 50px;
+  border: 5px solid #cf0000;
+  background-color: #d9d9d9;
+  resize: none;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 48px;
+  color: #000000;
+  padding-top: 0.5em;
+  margin-left: 40px;
+  scroll-behavior: smooth;
+  padding: 15px;
+}
+
+.short {
+  height: 200px;
+  width: 1000px;
+}
+
+.very-short {
+  height: 100px;
+  width: 300px;
+}
+
+.big {
+  height: 400px;
+  width: 1000px;
+}
+
+.button {
+  margin-left: 350px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 48px;
+  height: 70px;
+  width: 300px;
+  border-radius: 50px;
+  border: 5px solid #cf0000;
+  cursor: pointer;
+}
+
+.update {
+  background-color: #66e55a;
+}
+
+.delete {
+  background-color: #ff4a4a;
+}
